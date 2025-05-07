@@ -10,15 +10,18 @@
     --text-light: #777777;
 }
 
+/* Added gap between navbar and page content */
+body {
+    margin-top: 80px; /* Adjust this value to control the gap */
+}
+
 /* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 0;
     z-index: 1000;
-    transition: all 0.3s ease;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -39,11 +42,11 @@
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--dark-color);
     text-decoration: none;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .logo span {
@@ -63,7 +66,8 @@
     text-decoration: none;
     transition: color 0.3s ease;
     position: relative;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-links a:hover {
@@ -157,5 +161,42 @@
 
     .nav-links a::after {
         bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--light-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }

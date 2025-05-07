@@ -1,8 +1,13 @@
+// Debugging logs added to verify functionality
+console.log('Navbar script loaded');
+
 // Check if navbar functionality is already initialized
 if (!window.navbarInitialized) {
     window.navbarInitialized = true;
 
     document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM fully loaded and parsed');
+
         // Get navbar elements
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
@@ -14,11 +19,14 @@ if (!window.navbarInitialized) {
             return;
         }
 
+        console.log('Navbar elements found');
+
         // Mobile menu toggle
         hamburger.addEventListener('click', function(e) {
             e.stopPropagation();
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
+            console.log('Hamburger clicked, active class toggled');
         });
 
         // Close mobile menu when clicking on a link
@@ -26,6 +34,7 @@ if (!window.navbarInitialized) {
             if (e.target.tagName === 'A') {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                console.log('Nav link clicked, active class removed');
             }
         });
 
@@ -43,6 +52,7 @@ if (!window.navbarInitialized) {
             if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                console.log('Clicked outside navbar, active class removed');
             }
         });
 

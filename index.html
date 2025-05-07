@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -19,7 +20,7 @@
             <div class="nav-links">
                 <a href="/index.html" class="active">Home</a>
                 <a href="/pages/collections.html">Collections</a>
-                <a href="/pages/services.html">Services</a>
+                <a href="/pages/pricing.html">Pricing</a>
                 <a href="/pages/about.html">About</a>
                 <a href="/pages/contact.html">Contact</a>
                 <a href="#" class="btn">Book Consultation</a>
@@ -32,109 +33,129 @@
         </div>
     </nav>
 
-    <!-- Hero Section with 3D Slider -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-slider">
-            <div class="slide active">
-                <div class="slide-content">
-                    <h1>Elevate Your Space</h1>
-                    <p>Modern interior designs tailored to your lifestyle</p>
-                    <a href="#" class="btn">Explore Collections</a>
-                </div>
-                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');"></div>
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 class="animate__animated animate__fadeInUp">Elevate Your Living Space</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Bespoke interior designs that reflect your personality</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn animate__animated animate__fadeInUp animate__delay-2s">Explore Designs</a>
+                <a href="#" class="btn-outline animate__animated animate__fadeInUp animate__delay-2s">Virtual Tour</a>
             </div>
-            <div class="slide">
-                <div class="slide-content">
-                    <h1>Minimalist Luxury</h1>
-                    <p>Clean lines, premium materials, timeless elegance</p>
-                    <a href="#" class="btn">View Gallery</a>
-                </div>
-                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');"></div>
+        </div>
+        <div class="hero-image animate__animated animate__fadeInRight">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Luxury Interior Design">
             </div>
-            <div class="slide">
-                <div class="slide-content">
-                    <h1>Smart Living</h1>
-                    <p>Innovative designs for modern living</p>
-                    <a href="#" class="btn">Get Inspired</a>
+        </div>
+        <div class="scroll-indicator animate__animated animate__fadeIn animate__delay-3s">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- Design Philosophy -->
+    <section class="philosophy">
+        <div class="container">
+            <div class="philosophy-content animate__animated">
+                <h2 class="section-title">Our Design Philosophy</h2>
+                <p class="section-subtitle">Where aesthetics meet functionality</p>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card animate__animated">
+                        <div class="icon-circle">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Tailored Designs</h3>
+                        <p>Every space is unique, and so should be its design. We create custom solutions for each client.</p>
+                    </div>
+                    <div class="philosophy-card animate__animated">
+                        <div class="icon-circle">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sustainable Materials</h3>
+                        <p>Eco-friendly and durable materials that stand the test of time while protecting our planet.</p>
+                    </div>
+                    <div class="philosophy-card animate__animated">
+                        <div class="icon-circle">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Smart Solutions</h3>
+                        <p>Integrating technology seamlessly into your living spaces for modern convenience.</p>
+                    </div>
                 </div>
-                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1600566752225-3f2fe3c8f7a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');"></div>
             </div>
-            <div>
+        </div>
+    </section>
+
+    <!-- Signature Collections -->
+    <section class="collections">
+        <div class="container">
+            <h2 class="section-title animate__animated">Signature Collections</h2>
+            <p class="section-subtitle animate__animated">Curated designs for every taste</p>
+            
+            <div class="collection-slider">
+                <div class="collection-slide active">
+                    <div class="slide-content">
+                        <h3>Urban Modern</h3>
+                        <p>Sleek lines and contemporary finishes for metropolitan living</p>
+                        <a href="#" class="btn-outline">View Collection</a>
+                    </div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');"></div>
+                </div>
+                <div class="collection-slide">
+                    <div class="slide-content">
+                        <h3>Scandinavian Serenity</h3>
+                        <p>Minimalist designs with warm natural elements</p>
+                        <a href="#" class="btn-outline">View Collection</a>
+                    </div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80');"></div>
+                </div>
+                <div class="collection-slide">
+                    <div class="slide-content">
+                        <h3>Industrial Chic</h3>
+                        <p>Raw materials meet refined elegance</p>
+                        <a href="#" class="btn-outline">View Collection</a>
+                    </div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1600566752225-3f2fe3c8f7a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');"></div>
+                </div>
+            </div>
             <div class="slider-controls">
                 <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
                 <button class="next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- Featured Collections -->
-    <section class="featured-collections">
+    <!-- 3D Experience -->
+    <section class="experience">
         <div class="container">
-            <h2 class="section-title">Featured Collections</h2>
-            <p class="section-subtitle">Discover our most popular design packages</p>
-            
-            <div class="collections-carousel">
-                <div class="collection-card">
-                    <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');"></div>
-                    <h3>Urban Loft</h3>
-                    <p>Industrial chic meets modern comfort</p>
-                    <span class="price">From $2,499</span>
-                    <a href="#" class="btn-outline">View Details</a>
-                </div>
-                <div class="collection-card">
-                    <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80');"></div>
-                    <h3>Scandinavian</h3>
-                    <p>Light, airy, and functional spaces</p>
-                    <span class="price">From $1,999</span>
-                    <a href="#" class="btn-outline">View Details</a>
-                </div>
-                <div class="collection-card">
-                    <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');"></div>
-                    <h3>Modern Luxury</h3>
-                    <p>Opulent yet contemporary designs</p>
-                    <span class="price">From $3,499</span>
-                    <a href="#" class="btn-outline">View Details</a>
-                </div>
-                <div class="collection-card">
-                    <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
-                    <h3>Bohemian</h3>
-                    <p>Eclectic and colorful free-spirited designs</p>
-                    <span class="price">From $1,799</span>
-                    <a href="#" class="btn-outline">View Details</a>
-                </div>
-            </div>
-            <div class="carousel-dots"></div>
-        </div>
-    </section>
-
-    <!-- 3D Showcase -->
-    <section class="showcase-3d">
-        <div class="container">
-            <h2 class="section-title">Immersive 3D Showcase</h2>
-            <p class="section-subtitle">Experience our designs in virtual reality</p>
-            
-            <div class="showcase-container">
-                <div class="showcase-viewer" id="3d-viewer">
-                    <!-- This would be replaced with actual 3D content in a real implementation -->
-                    <div class="placeholder-3d">
-                        <div class="controls">
-                            <button class="rotate"><i class="fas fa-sync-alt"></i> Rotate</button>
-                            <button class="zoom-in"><i class="fas fa-search-plus"></i></button>
-                            <button class="zoom-out"><i class="fas fa-search-minus"></i></button>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="3D Room Preview">
-                    </div>
-                </div>
-                <div class="showcase-description">
-                    <h3>See Before You Buy</h3>
-                    <p>Our interactive 3D viewer allows you to explore every angle of our designs, change materials, and visualize how they would look in your space.</p>
+            <div class="experience-content">
+                <div class="content-left animate__animated">
+                    <h2 class="section-title">Immersive 3D Experience</h2>
+                    <p>Visualize your dream space before we bring it to life with our cutting-edge 3D design technology.</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> 360° room visualization</li>
-                        <li><i class="fas fa-check"></i> Customizable materials</li>
-                        <li><i class="fas fa-check"></i> Real-time lighting simulation</li>
-                        <li><i class="fas fa-check"></i> VR compatible</li>
+                        <li><i class="fas fa-check"></i> Real-time material changes</li>
+                        <li><i class="fas fa-check"></i> Furniture layout experimentation</li>
+                        <li><i class="fas fa-check"></i> Lighting simulation</li>
+                        <li><i class="fas fa-check"></i> Virtual reality walkthroughs</li>
                     </ul>
-                    <a href="#" class="btn">Try It Now</a>
+                    <a href="#" class="btn">Try Demo</a>
+                </div>
+                <div class="content-right animate__animated">
+                    <div class="experience-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="3D Design">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card-controls">
+                            <button><i class="fas fa-arrows-alt"></i> Rotate</button>
+                            <button><i class="fas fa-paint-roller"></i> Materials</button>
+                            <button><i class="fas fa-lightbulb"></i> Lighting</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,56 +164,62 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">Trusted by homeowners and businesses nationwide</p>
+            <h2 class="section-title animate__animated">Client Stories</h2>
+            <p class="section-subtitle animate__animated">Transforming spaces, creating happiness</p>
             
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="quote">"LuxeInteriors transformed our apartment into a magazine-worthy space. Their attention to detail is unmatched!"</div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card animate__animated">
+                    <div class="quote">"LuxeInteriors completely transformed our outdated home into a modern sanctuary. Their attention to detail is unmatched!"</div>
                     <div class="client">
                         <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J.">
                         <div class="client-info">
                             <h4>Sarah J.</h4>
                             <p>New York, NY</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial">
+                <div class="testimonial-card animate__animated">
                     <div class="quote">"The 3D visualization helped us make decisions with confidence. The final result exceeded our expectations."</div>
                     <div class="client">
                         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
                         <div class="client-info">
                             <h4>Michael T.</h4>
                             <p>Chicago, IL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="quote">"Working with LuxeInteriors was seamless from start to finish. Their designs have completely changed how we live in our home."</div>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K.">
-                        <div class="client-info">
-                            <h4>Priya K.</h4>
-                            <p>San Francisco, CA</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-dots"></div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta-section">
         <div class="container">
-            <h2>Ready to Transform Your Space?</h2>
-            <p>Schedule a free consultation with our design experts today</p>
-            <form class="cta-form">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Email Address">
-                <input type="tel" placeholder="Phone Number">
-                <button type="submit" class="btn">Book Free Consultation</button>
-            </form>
+            <div class="cta-card animate__animated">
+                <div class="cta-content">
+                    <h2>Ready to Begin Your Design Journey?</h2>
+                    <p>Schedule a free consultation with our design experts today</p>
+                </div>
+                <form class="cta-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit" class="btn">Book Consultation</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -213,11 +240,11 @@
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/collections.html">Collections</a></li>
+                        <li><a href="/pages/pricing.html">Pricing</a></li>
+                        <li><a href="/pages/about.html">About Us</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -251,6 +278,6 @@
     </footer>
 
     <script src="/js/navbar.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/home.js"></script>
 </body>
 </html>
