@@ -3,26 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxeInteriors | Modern Interior Designs</title>
+    <title>Intarion | Modern Interior Designs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Inline SVG Logo Style -->
+    <style>
+        .svg-logo {
+            width: auto;
+            height: 60px;
+        }
+        .logo-text {
+            fill: #525252;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .logo-accent {
+            fill: url(#logo-gradient);
+        }
+        .logo-icon {
+            fill: #c8af91;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Luxe<span>Interiors</span></a>
-            <div class="nav-links">
-                <a href="/index.html" class="active">Home</a>
-                <a href="/pages/collections.html">Collections</a>
-                <a href="/pages/pricing.html">Pricing</a>
-                <a href="/pages/about.html">About</a>
-                <a href="/pages/contact.html">Contact</a>
+        <div class="container">            <a href="#" class="logo logo-gradient">
+                <!-- Fallback SVG Logo -->
+                <svg class="svg-logo" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#525252" />
+                            <stop offset="50%" stop-color="#c8af91" />
+                            <stop offset="100%" stop-color="#a48e7b" />
+                        </linearGradient>
+                    </defs>
+                    <text x="10" y="40" class="logo-text">Int<tspan class="logo-accent">arion</tspan></text>
+                    <!-- Simplified geometric home icon -->
+                    <polygon points="180,55 160,35 160,55" class="logo-icon" />
+                    <polygon points="200,55 180,35 180,55" class="logo-icon" />
+                </svg>
+                <!-- Regular image as primary logo -->
+                <img src="images/intarion-logo.png" alt="Intarion" class="logo-image" style="display:none;">
+            </a>
+            <div class="nav-links">            <a href="index.html" class="active">Home</a>
+                <a href="pages/collections.html">Collections</a>
+                <a href="pages/pricing.html">Pricing</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/contact.html">Contact</a>
                 <a href="#" class="btn">Book Consultation</a>
             </div>
             <button class="hamburger">
@@ -34,23 +68,30 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content animate__animated animate__fadeIn">
-            <h1 class="animate__animated animate__fadeInUp">Elevate Your Living Space</h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-1s">Bespoke interior designs that reflect your personality</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn animate__animated animate__fadeInUp animate__delay-2s">Explore Designs</a>
-                <a href="#" class="btn-outline animate__animated animate__fadeInUp animate__delay-2s">Virtual Tour</a>
+    <section class="hero hero-carousel-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-carousel-container">
+            <div class="hero-carousel">
+                <div class="hero-slide active">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Interior Design 1" class="hero-img-3d">
+                </div>
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80" alt="Interior Design 2" class="hero-img-3d">
+                </div>
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=1200&q=80" alt="Interior Design 3" class="hero-img-3d">
+                </div>
+            </div>
+            <div class="hero-carousel-controls">
+                <div class="hero-dots"></div>
             </div>
         </div>
-        <div class="hero-image animate__animated animate__fadeInRight">
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Luxury Interior Design">
-            </div>
-        </div>
-        <div class="scroll-indicator animate__animated animate__fadeIn animate__delay-3s">
-            <span>Scroll</span>
-            <div class="line"></div>
+        <div class="hero-content-modern">
+            <div class="hero-title-group">
+                <span class="hero-subtitle">INTERIOR</span>
+                <span class="hero-accent-line"></span>
+            </div>            <h1 class="hero-main-title">Design</h1>
+            <p class="hero-desc"><span class="hero-brand animate-gradient">Intarion</span>—Where Your Spaces Find Soul.</p>
         </div>
     </section>
 
@@ -169,7 +210,7 @@
             
             <div class="testimonial-grid">
                 <div class="testimonial-card animate__animated">
-                    <div class="quote">"LuxeInteriors completely transformed our outdated home into a modern sanctuary. Their attention to detail is unmatched!"</div>
+                    <div class="quote">"Intarion completely transformed our outdated home into a modern sanctuary. Their attention to detail is unmatched!"</div>
                     <div class="client">
                         <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J.">
                         <div class="client-info">
@@ -226,9 +267,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>LuxeInteriors</h3>
+            <div class="footer-content">                <div class="footer-col">                    <h3 class="gradient-text">Intarion</h3>
                     <p>Creating beautiful, functional spaces that reflect your personality and lifestyle.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -262,22 +301,21 @@
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 123 Design Ave, New York, NY</li>
                         <li><i class="fas fa-phone"></i> (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> hello@luxeinteriors.com</li>
+                        <li><i class="fas fa-envelope"></i> hello@intarion.com</li>
                         <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 LuxeInteriors. All rights reserved.</p>
+                <p>&copy; 2025 Intarion. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <script src="/js/navbar.js"></script>
-    <script src="/js/home.js"></script>
+    </footer>    <script src="js/navbar.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/hero-carousel.js"></script>
 </body>
 </html>

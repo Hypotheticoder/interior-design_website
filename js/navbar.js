@@ -36,14 +36,26 @@ if (!window.navbarInitialized) {
                 navLinks.classList.remove('active');
                 console.log('Nav link clicked, active class removed');
             }
-        });
-
-        // Scroll effect for navbar
+        });        // Enhanced scroll effect for navbar with logo animation
+        const logoImage = document.querySelector('.logo-image');
+        
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 30) {
                 navbar.classList.add('scrolled');
+                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.15)';
+                
+                // Subtle logo scale effect on scroll
+                if (logoImage) {
+                    logoImage.style.transform = 'scale(0.95)';
+                }
             } else {
                 navbar.classList.remove('scrolled');
+                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.08)';
+                
+                // Reset logo size when back at top
+                if (logoImage) {
+                    logoImage.style.transform = 'scale(1)';
+                }
             }
         });
 
@@ -54,18 +66,33 @@ if (!window.navbarInitialized) {
                 navLinks.classList.remove('active');
                 console.log('Clicked outside navbar, active class removed');
             }
-        });
-
-        // Handle active link highlighting
+        });        // Improved active link highlighting
         const currentPath = window.location.pathname;
         const navLinksList = navLinks.querySelectorAll('a');
+        let activeFound = false;
         
         navLinksList.forEach(link => {
             const linkPath = link.getAttribute('href');
-            if (currentPath.endsWith(linkPath)) {
-                link.classList.add('active');
+            // Don't add active class to the Book Consultation button
+            if (!link.classList.contains('btn')) {
+                if ((linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('index.html'))) || 
+                    (linkPath !== 'index.html' && currentPath.includes(linkPath))) {
+                    link.classList.add('active');
+                    activeFound = true;
+                } else {
+                    link.classList.remove('active');
+                }
             }
         });
+        
+        // If no active link is found and we're on homepage, set home as active
+        if (!activeFound && (currentPath === '/' || currentPath.endsWith('index.html'))) {
+            const homeLink = Array.from(navLinksList).find(link => 
+                link.getAttribute('href').includes('index.html') || 
+                link.getAttribute('href') === '/'
+            );
+            if (homeLink) homeLink.classList.add('active');
+        }
 
         // Smooth scrolling for anchor links
         navLinksList.forEach(link => {
@@ -87,5 +114,18 @@ if (!window.navbarInitialized) {
                 }
             });
         });
+    });
+
+    // Animate gradient elements on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+            const gradientElements = document.querySelectorAll('.gradient-text, .animate-gradient, .gradient-highlight');
+            gradientElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        }, 300);
     });
 }
